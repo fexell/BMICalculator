@@ -41,7 +41,9 @@ namespace BMICalculator {
 
         public static double HeightValidator( string value ) {
             while ( true ) {
-                if ( double.TryParse( value, out double height ) && height > 1.20 && height < 2.00 ) {
+                value = value.Replace( '.', ',' );
+
+                if( double.TryParse( value, out double height ) && height > 1.20 && height < 2.00 ) {
                     return height;
                 } else {
                     Console.Write( "Please enter a valid height (1.20 - 2.00): " );
