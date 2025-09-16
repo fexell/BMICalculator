@@ -6,22 +6,35 @@ using System.Threading.Tasks;
 
 namespace BMICalculator {
     internal class Helpers {
-        public static double WeightValidator( string value, string unit = "metric" ) {
+        public static int IntValidator( string value ) {
             while ( true ) {
-                if ( unit == "metric" ) {
-                    if ( double.TryParse( value, out var weight ) && weight > 40 && weight < 200 ) {
-                        return weight;
-                    } else {
-                        Console.Write( "Please enter a valid weight (40 - 200): " );
-                        value = Console.ReadLine();
-                    }
-                } else if( unit == "imperial" ) {
-                    if ( double.TryParse( value, out var weight ) && weight > 88 && weight < 440 ) {
-                        return weight;
-                    } else {
-                        Console.Write( "Please enter a valid weight (88 - 440): " );
-                        value = Console.ReadLine();
-                    }
+                if ( int.TryParse( value, out int number ) ) {
+                    return number;
+                } else {
+                    Console.Write( "Please enter a valid number: " );
+                    value = Console.ReadLine();
+                }
+            }
+        }
+
+        public static double DoubleValidator( string value ) {
+            while ( true ) {
+                if ( double.TryParse( value, out double number ) ) {
+                    return number;
+                } else {
+                    Console.Write( "Please enter a valid (double) number: " );
+                    value = Console.ReadLine();
+                }
+            }
+        }
+
+        public static double WeightValidator( string value ) {
+            while ( true ) {
+                if ( double.TryParse( value, out double weight ) && weight > 20 && weight < 300 ) {
+                    return weight;
+                } else {
+                    Console.Write( "Please enter a valid weight (20 - 300): " );
+                    value = Console.ReadLine();
                 }
             }
         }

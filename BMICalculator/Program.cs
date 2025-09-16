@@ -15,8 +15,12 @@ namespace BMICalculator {
             }
         }
 
-        static void Main(string[] args) {
+        public static void Run() {
 
+        }
+
+        static void Main(string[] args) {
+            Menu.Run();
         }
     }
 }
