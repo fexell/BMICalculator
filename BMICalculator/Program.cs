@@ -22,6 +22,7 @@ namespace BMICalculator {
         public static void Run() {
             Console.Write( "Enter your weight: " );
             double weight = Helpers.WeightValidator( Console.ReadLine() );
+
             Console.Write( "Enter your height: " );
             double height = Helpers.HeightValidator( Console.ReadLine() );
 
