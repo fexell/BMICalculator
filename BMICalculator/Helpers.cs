@@ -30,10 +30,10 @@ namespace BMICalculator {
 
         public static double WeightValidator( string value ) {
             while ( true ) {
-                if ( double.TryParse( value, out double weight ) && weight > 20 && weight < 300 ) {
+                if ( double.TryParse( value, out double weight ) && weight > 40 && weight < 150 ) {
                     return weight;
                 } else {
-                    Console.Write( "Please enter a valid weight (20 - 300): " );
+                    Console.Write( "Please enter a valid weight (40 - 150): " );
                     value = Console.ReadLine();
                 }
             }
