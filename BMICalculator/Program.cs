@@ -26,7 +26,7 @@ namespace BMICalculator {
             double height = Helpers.HeightValidator( Console.ReadLine() );
 
             double bmi1 = CalculateBMI( weight, height );
-            Console.WriteLine( $"BMI (metric, default): {bmi1:F2}" );
+            Console.WriteLine( $"\nBMI (metric, default): {bmi1:F2}" );
 
             double bmi2 = CalculateBMI( height: height, weight: weight );
             Console.WriteLine( $"BMI (metric, named args): {bmi2:F2}" );
